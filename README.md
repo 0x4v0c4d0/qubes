@@ -4,17 +4,15 @@ This is guide will walk you through the process of installing Qubes OS and also,
 
 ## Requirements
 
-You need hardware with virtualization supported. [Read more](https://www.qubes-os.org/doc/installation-guide/#hardware-requirements) and google you hardware virtualization compatibilities
+- You need hardware with virtualization supported. [Read more](https://www.qubes-os.org/doc/installation-guide/#hardware-requirements) and google you hardware virtualization compatibilities
 
-And [USB-stick with flashed Qubes OS iso on it](https://www.qubes-os.org/doc/installation-guide/#copying-the-iso-onto-the-installation-medium)
+- And [USB-stick with flashed Qubes OS iso on it](https://www.qubes-os.org/doc/installation-guide/#copying-the-iso-onto-the-installation-medium)
 
-## BIOS Setup
+- Enable all [required virtualization features](https://www.qubes-os.org/hcl/#list-columns): HVM, IOMMU, TPM, SLAT
 
-Before the OS setup boot in BIOS then find and enable all [required virtualization features](https://www.qubes-os.org/hcl/#list-columns): HVM, IOMMU, TPM, SLAT
+- (recomendation) Set up BIOS admin&user passwords
 
-Set up BIOS admin&user passwords
-
-## Qubes OS Installation
+## Installation
 
 Follow the [official guide](https://www.qubes-os.org/doc/installation-guide/#installation)
 
@@ -32,10 +30,11 @@ Choose debian as default and leave preconfigured VMs
 
 When Qubes OS installed, boot, login and configure the system
 
-Connect to the Internet first
+_Connect to the Internet first_
 
-### Basic Debian Template
-Set the netVM of debian template to sys-firewall
+
+### Template: debian
+Set the NetVM of debian template to sys-firewall
 
 Run in the debian template terminal:
 ```
@@ -47,8 +46,9 @@ sudo chmod +x *.sh
 sudo ./base-template.sh
 ```
 
-Then shutdown debian template
-Start & execute following in the any AppVM that has an debian as template for set up the my terminal appearance (the command must be executed only once, on the next appvm boot everything will already be configured)
+Then shutdown debian template.
+
+Execute following in the all new AppVM that we created bellow
 ```
 sudo /etc/qubes/setup/appvm.sh
 ```
