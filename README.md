@@ -1,6 +1,6 @@
-# My Qubes OS setup
+# QubesOS setup & configuration
 
-This is guide will walk you through the process of installing Qubes OS and also, in addition to the [official guide](https://www.qubes-os.org/doc/installation-guide/#hardware-requirements), this repo will give you configuration files and additional instructions to set up the system environment exactly like mine
+This is guide will walk you through the process of installing Qubes OS and also, in addition to the [official guide](https://www.qubes-os.org/doc/installation-guide/#hardware-requirements), this repo will give you configuration files and additional instructions to set up the system environment, VPN qubes
 
 ## Requirements
 
@@ -40,9 +40,9 @@ Set the netVM of debian template to sys-firewall
 Run in the debian template terminal:
 ```
 sudo apt-get install git
-git clone https://github.com/imnetcat/myqubes
-sudo mv myqubes /etc
-cd /etc/myqubes/setup
+git clone https://github.com/0x4v0c4d0/qubes
+sudo mv qubes /etc
+cd /etc/qubes/setup
 sudo chmod +x *.sh
 sudo ./base-template.sh
 ```
@@ -50,14 +50,14 @@ sudo ./base-template.sh
 Then shutdown debian template
 Start & execute following in the any AppVM that has an debian as template for set up the my terminal appearance (the command must be executed only once, on the next appvm boot everything will already be configured)
 ```
-sudo /etc/myqubes/setup/appvm.sh
+sudo /etc/qubes/setup/appvm.sh
 ```
 
 ### VPN Qube 
 
 Clone base debian template into debian-vpn template and run into created qube
 ```
-sudo /etc/myqubes/setup/vpn-template.sh
+sudo /etc/qubes/setup/vpn-template.sh
 ```
 
 _For details see: [Installation openvpn for NetworkManager](https://www.ivpn.net/setup/linux-netman/)_
@@ -65,7 +65,7 @@ _For details see: [Installation openvpn for NetworkManager](https://www.ivpn.net
 
 Create sys-vpn NetVM, set the debian-vpn template as a template, add `network-manager` and `qubes-firewall` into services of the qube then run into created qube
 ```
-sudo /etc/myqubes/setup/vpn.sh
+sudo /etc/qubes/setup/vpn.sh
 ```
 
 _For details see: [Installation of vpn qube](https://github.com/Qubes-Community/Contents/blob/master/docs/configuration/vpn.md#set-up-a-proxyvm-as-a-vpn-gateway-using-networkmanager)_
@@ -74,5 +74,5 @@ Then download and copy to the sys-vpn qube openvpn-compatible configs.
 
 Import ovpn configs 
 ```
-sudo /etc/myqubes/setup/openvpn/import.sh /path/to/ovpns username password
+sudo /etc/qubes/setup/openvpn/import.sh /path/to/ovpns username password
 ```

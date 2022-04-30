@@ -1,5 +1,5 @@
 # Set up appearence
-dconf load / < /etc/myqubes/appearance/dconf
+dconf load / < /etc/qubes/appearance/dconf
 mkdir ~/.config/terminator
-cp /etc/myqubes/appearance/terminator ~/.config/terminator/config
-cp /etc/myqubes/appearance/cryptoprice.sh ~
+cp /etc/qubes/appearance/terminator ~/.config/terminator/config
+cp /etc/qubes/appearance/cryptoprice.sh ~
