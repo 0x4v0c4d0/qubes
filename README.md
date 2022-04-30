@@ -32,6 +32,8 @@ When Qubes OS installed, boot, login and configure the system
 
 _Connect to the Internet first_
 
+### Sceenshots
+For automoving screenshots to the one of appwm use [script](https://github.com/scott-m-willett/qvm-screenshot)
 
 ### Template: debian
 Set the NetVM of debian template to sys-firewall
