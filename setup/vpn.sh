@@ -24,8 +24,8 @@ sudo chmod +x /etc/myqubes/vpn/openvpn/import.sh
 /etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/configs/free-vpngate
 
 # Import configs with credentials:
-#sudo /etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/configs/free-protonvpn username password
+#/etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/configs/free-protonvpn username password
 
 # And you can import any other configs
-#sudo /etc/myqubes/vpn/openvpn/import.sh folder/with/ovpn/configs/ username password
-#sudo /etc/myqubes/vpn/openvpn/import.sh folder/with/ovpn/configs/
+#/etc/myqubes/vpn/openvpn/import.sh folder/with/ovpn/configs/ username password
+#/etc/myqubes/vpn/openvpn/import.sh folder/with/ovpn/configs/
