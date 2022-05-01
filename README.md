@@ -36,19 +36,19 @@ _Connect to the Internet first_
 For automoving screenshots to the one of appwm use [script](https://github.com/scott-m-willett/qvm-screenshot)
 
 ### Template: debian
-Set the NetVM of debian template to sys-firewall
+Download this repo. 
 
-Run in the debian template terminal:
-```
-sudo apt-get install git
-git clone https://github.com/0x4v0c4d0/qubes
-sudo mv qubes/* /etc/myqubes
-cd /etc/myqubes/setup
-sudo chmod +x *.sh
-sudo ./base-template.sh
-```
+Copy it to the base debian template.
 
-Then shutdown debian template.
+Make folder for repo: `sudo mkdir /etc/myqubes`
+
+Save repo globally for debian templates and AppVM's: `sudo mv path/to/this/repo/* /etc/myqubes`
+
+Give access to execute scripts: `sudo chmod +x /etc/myqubes/setup/*.sh`
+
+Execute script that prepears base debian template for use: `sudo /etc/myqubes/setup/base-template.sh`
+
+Then shutdown template.
 
 ### Template: debian-cryptowallet
 
