@@ -103,9 +103,11 @@ sudo /etc/myqubes/setup/vpn.sh
 
 _For details see: [Installation of vpn qube](https://github.com/Qubes-Community/Contents/blob/master/docs/configuration/vpn.md#set-up-a-proxyvm-as-a-vpn-gateway-using-networkmanager)_
 
-Then download and copy to the sys-vpn qube openvpn-compatible configs. 
-
-Import ovpn configs 
+Some ovpn configs are preloaded, you can use this and you can import you own ovpn configs:
 ```
 sudo /etc/myqubes/setup/openvpn/import.sh /path/to/ovpns username password
+```
+or without creds
+```
+sudo /etc/myqubes/setup/openvpn/import.sh /path/to/ovpns
 ```
