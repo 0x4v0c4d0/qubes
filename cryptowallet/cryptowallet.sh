@@ -1,3 +1,2 @@
-# Install Exodus:
-#  manual install from https://www.exodus.com/releases/
-
+# Install Wassabi wallet:
+#  manual install from https://wasabiwallet.io/#download
