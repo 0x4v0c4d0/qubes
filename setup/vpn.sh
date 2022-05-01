@@ -1,7 +1,7 @@
 # Set up sys-vpn AppVM
+# DO NOT FORGET add network-manager into qube services before executing this
 
 # Set up autostart
-
 # Wait until network setup
 echo 'while ! ping -c 1 -W 1 1.1.1.1; do' >> /rw/config/rc.local
 echo '   sleep 1' >> /rw/config/rc.local
