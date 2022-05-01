@@ -21,7 +21,7 @@ sudo echo 'ip6tables -I FORWARD -i eth0 -j DROP' >> /rw/config/qubes-firewall-us
 
 # Import configs
 sudo chmod +x /etc/myqubes/vpn/openvpn/import.sh
-sudo /etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/free-vpngate
+sudo /etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/configs/free-vpngate
 
 # Import configs with credentials:
 #sudo /etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/configs/free-protonvpn username password
