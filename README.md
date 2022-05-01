@@ -42,8 +42,8 @@ Run in the debian template terminal:
 ```
 sudo apt-get install git
 git clone https://github.com/0x4v0c4d0/qubes
-sudo mv qubes /etc
-cd /etc/qubes/setup
+sudo mv qubes/* /etc/myqubes
+cd /etc/myqubes/setup
 sudo chmod +x *.sh
 sudo ./base-template.sh
 ```
@@ -52,7 +52,7 @@ Then shutdown debian template.
 
 Execute following in the all new AppVM that we created bellow
 ```
-sudo /etc/qubes/setup/appvm.sh
+sudo /etc/myqubes/setup/appvm.sh
 ```
 
 ### VPN Qube 
@@ -67,7 +67,7 @@ _For details see: [Installation openvpn for NetworkManager](https://www.ivpn.net
 
 Create sys-vpn NetVM, set the debian-vpn template as a template, add `network-manager` and `qubes-firewall` into services of the qube then run into created qube
 ```
-sudo /etc/qubes/setup/vpn.sh
+sudo /etc/myqubes/setup/vpn.sh
 ```
 
 _For details see: [Installation of vpn qube](https://github.com/Qubes-Community/Contents/blob/master/docs/configuration/vpn.md#set-up-a-proxyvm-as-a-vpn-gateway-using-networkmanager)_
@@ -76,5 +76,5 @@ Then download and copy to the sys-vpn qube openvpn-compatible configs.
 
 Import ovpn configs 
 ```
-sudo /etc/qubes/setup/openvpn/import.sh /path/to/ovpns username password
+sudo /etc/myqubes/setup/openvpn/import.sh /path/to/ovpns username password
 ```
