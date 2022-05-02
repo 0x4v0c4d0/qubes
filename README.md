@@ -72,6 +72,12 @@ See:
 
 Install what you want. I'd preffer wassabi wallet.
 
+Manual install wassabi wallet according provided instruction bellow.
+
+Some **warnings**:
+- Wasabi wallet should be installed into AppVM (NOT into separate template)
+- Manually installed software like Wasabi wallet sometimes not display into qube appmenu list. See [Manually installed software](https://github.com/0x4v0c4d0/qubes/master/README.md#manually-installed-software)
+
 ### Template: dev-template
 
 If you need safe develop envirenment clone the base debian template and then run into clone template:
@@ -115,3 +121,11 @@ sudo /etc/myqubes/setup/openvpn/import.sh /path/to/ovpns
 **(Recomendation): Edit `sudo nano /rw/config/rc.local` and set in the last line one of imported config of vpn server to which you want connect automatically after qube boot**
 
 Setting up the sys-vpn done. Now you can use at as proxy for another AppVM or NetVM.
+
+
+### Manually installed software
+In case you install something like `dpkg -i package.deb` - new app sometimes not display into appmenu list, this could be fixes for executing script like for Wasabi Wallet
+
+[This script](https://github.com/0x4v0c4d0/qubes/blob/master/cryptowallets/wasabi-app-menu-entry.sh) show how to fix this for Wasabi wallet. Analogically for any other soft.
+
+[See details](https://www.qubes-os.org/doc/app-menu-shortcut-troubleshooting/#what-if-my-application-has-not-been-automatically-included-in-the-list-of-available-apps)
