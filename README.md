@@ -95,6 +95,7 @@ sudo /etc/myqubes/setup/vpn-template.sh
 
 _For details see: [Installation openvpn for NetworkManager](https://www.ivpn.net/setup/linux-netman/)_
 
+Shutdown vpn template. Remove from `network-manager` service from it.
 
 Create sys-vpn NetVM, set the debian-vpn template as a template, add `network-manager` into services of the qube then run into created qube
 ```
