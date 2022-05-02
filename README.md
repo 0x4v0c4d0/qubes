@@ -76,7 +76,7 @@ Install what you want. I'd preffer wassabi wallet.
 
 If you need safe develop envirenment clone the base debian template and then run into clone template:
 ```
-sudo /etc/qubes/setup/dev.sh
+sudo /etc/myqubes/setup/dev.sh
 ```
 
 ### Next let's configure AppWM's
@@ -88,16 +88,15 @@ sudo /etc/myqubes/setup/appvm.sh
 
 ### VPN Qube 
 
-Clone base debian template into debian-vpn template, add `network-manager` into services and run into created qube
+Clone base debian template into debian-vpn template and run into created qube
 ```
 sudo /etc/myqubes/setup/vpn-template.sh
 ```
 
 _For details see: [Installation openvpn for NetworkManager](https://www.ivpn.net/setup/linux-netman/)_
 
-Shutdown vpn template. Remove from `network-manager` service from it.
 
-Create sys-vpn NetVM, set the debian-vpn template as a template, add `network-manager` into services of the qube then run into created qube
+Create sys-vpn NetVM, set the debian-vpn template as a template, add `network-manager` and `qubes-firewall` into services of the qube then run into created qube
 ```
 sudo /etc/myqubes/setup/vpn.sh
 ```
