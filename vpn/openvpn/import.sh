@@ -20,6 +20,4 @@ do
   	fi
         nmcli connection modify "${name}" vpn.user-name "${USERNAME}"
         nmcli connection modify "${name}" vpn.secrets password="${PASS}"
-	sudo echo '[vpn-secrets]' >> /etc/NetworkManager/system-connections/"${name}"
-	sudo echo password="${PASS}" >> /etc/NetworkManager/system-connections/"${name}"
 done
