@@ -18,3 +18,14 @@ sudo echo 'iptables -I FORWARD -o eth0 -j DROP' >> /rw/config/qubes-firewall-use
 sudo echo 'iptables -I FORWARD -i eth0 -j DROP' >> /rw/config/qubes-firewall-user-script
 sudo echo 'ip6tables -I FORWARD -o eth0 -j DROP' >> /rw/config/qubes-firewall-user-script
 sudo echo 'ip6tables -I FORWARD -i eth0 -j DROP' >> /rw/config/qubes-firewall-user-script
+
+# Import configs
+sudo chmod +x /etc/myqubes/vpn/openvpn/import.sh
+sudo /etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/configs/free-vpngate
+
+# Import configs with credentials:
+#sudo /etc/myqubes/vpn/openvpn/import.sh /etc/myqubes/vpn/openvpn/configs/free-protonvpn username password
+
+# And you can import any other configs
+#sudo /etc/myqubes/vpn/openvpn/import.sh folder/with/ovpn/configs/ username password
+#sudo /etc/myqubes/vpn/openvpn/import.sh folder/with/ovpn/configs/
