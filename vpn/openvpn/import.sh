@@ -10,11 +10,21 @@ USERNAME="$2" # Optional
 PASS="$3" # Optional
 
 for f in $(ls -1 "${CONFIGS_PATH}/"*.ovpn)
-do    
+do
+	# Import config
         nmcli connection import type openvpn file $f
+	# Get config name (same as .ovpn file name
         name=`basename -s .ovpn $f`;
+	# openvpn could try to search for certs and passwords in invalid location
 	nmcli connection modify "${name}" +vpn.data password-flags=0
 	nmcli connection modify "${name}" +vpn.data cert-pass-flags=0
+	# Move cert from /root/.cert to /home/user/.cert
+	sudo mv "/root/.cert/nm-openvpn/${name}-*.pem" /home/user/.cert/nm-openvpn/
+	nmcli connection modify "${name}" +vpn.data ca="/home/user/.cert/nm-openvpn/${name}-ca.pem"
+	nmcli connection modify "${name}" +vpn.data key="/home/user/.cert/nm-openvpn/${name}-key.pem"
+	nmcli connection modify "${name}" +vpn.data cert="/home/user/.cert/nm-openvpn/${name}-cert.pem"
+		
+	# If username & password not specified then do not add them
 	if [[ "${PASS}" == '' ]]; then
     		continue
   	fi
