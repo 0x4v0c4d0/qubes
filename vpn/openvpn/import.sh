@@ -32,6 +32,7 @@ do
   	fi
         nmcli connection modify "${name}" vpn.user-name "${USERNAME}"
         nmcli connection modify "${name}" vpn.secrets password="${PASS}"
+	nmcli connection modify "${name}" +vpn.data ta="/home/user/.cert/nm-openvpn/${name}-tls-auth.pem"
 done
 
 # Move cert from /root/.cert to /home/user/.cert
