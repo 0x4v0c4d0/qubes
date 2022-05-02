@@ -50,9 +50,9 @@ Execute script that prepears base debian template for use: `sudo /etc/myqubes/se
 
 Then shutdown template.
 
-### Template: debian-cryptowallet
+### AppVM: cryptowallet
 
-Clone base debian template. Launch it.
+Create default AppVM.
 
 Then choose wallet to install. See list of BTC wallets that
 - non-custodial (you own you keys)
@@ -60,13 +60,13 @@ Then choose wallet to install. See list of BTC wallets that
 - privacy and anonymous driven
 
 See:
-1. [Wassabi wallet](https://wasabiwallet.io/)
+1. [Wassabi wallet](https://wasabiwallet.io/).
 
-  Manual installation from https://wasabiwallet.io/#download
+  Installation: [manual](https://wasabiwallet.io/#download) *Should be installed into AppVM, NOT IN SEPARATE TEMPLATE*
 
 2. [Electrum](https://electrum.org/)
 
-  Installation: `sudo snap install electrum`
+  Installation(in separate debian-cryptowallet template qube): `sudo snap install electrum`
   
 3. _Know another one?... pull request welcome_
 
