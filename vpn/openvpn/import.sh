@@ -9,6 +9,9 @@ CONFIGS_PATH="$1"
 USERNAME="$2" # Optional
 PASS="$3" # Optional
 
+# Create folder for certs if it was not exist
+mkdir -p /home/user/.cert/nm-openvpn
+
 for f in $(ls -1 "${CONFIGS_PATH}/"*.ovpn)
 do
 	# Import config
@@ -19,7 +22,6 @@ do
 	nmcli connection modify "${name}" +vpn.data password-flags=0
 	nmcli connection modify "${name}" +vpn.data cert-pass-flags=0
 	# Move cert from /root/.cert to /home/user/.cert
-	sudo mv "/root/.cert/nm-openvpn/${name}-*.pem" /home/user/.cert/nm-openvpn/
 	nmcli connection modify "${name}" +vpn.data ca="/home/user/.cert/nm-openvpn/${name}-ca.pem"
 	nmcli connection modify "${name}" +vpn.data key="/home/user/.cert/nm-openvpn/${name}-key.pem"
 	nmcli connection modify "${name}" +vpn.data cert="/home/user/.cert/nm-openvpn/${name}-cert.pem"
@@ -31,3 +33,6 @@ do
         nmcli connection modify "${name}" vpn.user-name "${USERNAME}"
         nmcli connection modify "${name}" vpn.secrets password="${PASS}"
 done
+
+# Move cert from /root/.cert to /home/user/.cert
+sudo mv -v /root/.cert/nm-openvpn/* /home/user/.cert/nm-openvpn/
