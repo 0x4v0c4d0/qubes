@@ -90,7 +90,7 @@ sudo /etc/myqubes/setup/appvm.sh
 
 Clone base debian template into debian-vpn template and run into created qube
 ```
-sudo /etc/qubes/setup/vpn-template.sh
+sudo /etc/myqubes/setup/vpn-template.sh
 ```
 
 _For details see: [Installation openvpn for NetworkManager](https://www.ivpn.net/setup/linux-netman/)_
