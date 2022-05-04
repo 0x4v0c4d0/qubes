@@ -1,7 +1,7 @@
-# This should be executed in base debian template for adding
+# This should be executed in whonix workstation template for adding
 #  the wasabi wallet appmenu entry in case of original 
 #  app menu entry missang after installing
-# After executing this script you should execute `qvm-sync-appmenus debian-11` from dom0 qube for sync appmenu
+# After executing this script you should execute `qvm-sync-appmenus whonix-ws-16` from dom0 qube for sync appmenu
 
 sudo echo '[Desktop Entry]' >> /usr/share/applications/wassabee.desktop
 sudo echo 'Version=1.0' >> /usr/share/applications/wassabee.desktop
