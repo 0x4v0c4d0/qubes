@@ -138,8 +138,7 @@ Yellow: browsing same special, important stuff
 Orange: common browsing of some special, important staff
 Red: very important browsing\other, should use secure network and can be disposable
 
-![screenshot_2022-05-04_10:24:43](https://user-images.githubusercontent.com/104268605/166702621-261704e2-62c7-454b-8095-762f915582c0.png)
-pps)
+![screenshot_2022-05-04_10:49:17](https://user-images.githubusercontent.com/104268605/166707949-eb688c13-04ff-426e-975e-6292c8f17eb1.png)
 
 ### Manually installed software
 In case you install something like `dpkg -i package.deb` - new app sometimes not display into appmenu list, this could be fixes for executing script like for Wasabi Wallet
