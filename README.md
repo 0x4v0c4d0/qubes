@@ -118,7 +118,9 @@ or without creds
 sudo /etc/myqubes/setup/openvpn/import.sh /path/to/ovpns
 ```
 
-**(Recomendation): Edit `sudo nano /rw/config/rc.local` and set in the last line one of imported config of vpn server to which you want connect automatically after qube boot**
+**NB: Use TCP VPN connection for vpn-tor/tor-vpn/vpn-tor-vpn**
+
+**NB: Edit `sudo nano /rw/config/rc.local` and set in the last line one of imported config of vpn server to which you want connect automatically after qube boot**
 
 Setting up the sys-vpn done. Now you can use at as proxy for another AppVM or NetVM.
 
