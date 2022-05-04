@@ -52,7 +52,7 @@ Then shutdown template.
 
 ### AppVM: cryptowallet
 
-Create default AppVM.
+Create default AppVM with whonix workstation as template.
 
 Then choose wallet to install. See list of BTC wallets that
 - non-custodial (you own you keys)
@@ -66,11 +66,15 @@ See:
 
 2. [Electrum](https://electrum.org/)
 
-  Installation(in separate debian-cryptowallet template qube): `sudo snap install electrum`
+  Preinstalled in whonix workstation
   
-3. _Know another one?... pull request welcome_
+3. [Monero](https://www.getmonero.org/downloads/#gui)
 
-Install what you want. I'd preffer wassabi wallet.
+  Preinstalled in whonix workstation
+  
+4. _Know another one?... pull request welcome_
+
+Choose what you want. I'd preffer wassabi wallet.
 
 Manual install wassabi wallet according provided instruction bellow.
 
