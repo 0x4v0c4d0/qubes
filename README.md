@@ -124,10 +124,26 @@ sudo /etc/myqubes/setup/openvpn/import.sh /path/to/ovpns
 
 Setting up the sys-vpn done. Now you can use at as proxy for another AppVM or NetVM.
 
+### Qubes colors
+
+Set up for as you wish.
+
+My setup: color meaning what a special things could do on this qube. Where every color means:
+Black: no work on this qubes
+Purple: qubes without Internet, base tasks, minimum browsing (or no browsing at all)
+Blue: browsing, known sites visiting, such as forums and using telegram\irc\other common IM clients
+Gray: skipped
+Green: browsing same stuff
+Yellow: browsing same special, important stuff
+Orange: common browsing of some special, important staff
+Red: very important browsing\other, should use secure network and can be disposable
+
+![screenshot_2022-05-04_10:24:43](https://user-images.githubusercontent.com/104268605/166702621-261704e2-62c7-454b-8095-762f915582c0.png)
+pps)
 
 ### Manually installed software
 In case you install something like `dpkg -i package.deb` - new app sometimes not display into appmenu list, this could be fixes for executing script like for Wasabi Wallet
 
-[This script](https://github.com/0x4v0c4d0/qubes/blob/master/cryptowallets/wasabi-app-menu-entry.sh) show how to fix this for Wasabi wallet. Analogically for any other soft.
+[See details](https://www.qubes-os.org/doc/app-menu-shortcut-troubleshooting/#what-if-my-application-has-not-been-automatically-included-in-the-list-of-available-a
 
-[See details](https://www.qubes-os.org/doc/app-menu-shortcut-troubleshooting/#what-if-my-application-has-not-been-automatically-included-in-the-list-of-available-apps)
+
