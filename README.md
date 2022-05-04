@@ -145,8 +145,4 @@ Red: very important browsing\other, should use secure network and can be disposa
 ![screenshot_2022-05-04_10:49:17](https://user-images.githubusercontent.com/104268605/166707949-eb688c13-04ff-426e-975e-6292c8f17eb1.png)
 
 ### Manually installed software
-In case you install something like `dpkg -i package.deb` - new app sometimes not display into appmenu list, this could be fixes for executing script like for Wasabi Wallet
-
-[See details](https://www.qubes-os.org/doc/app-menu-shortcut-troubleshooting/#what-if-my-application-has-not-been-automatically-included-in-the-list-of-available-a
-
-
+In case you install something like `dpkg -i package.deb` - new app sometimes not display into appmenu list. [This script](https://github.com/0x4v0c4d0/qubes/blob/master/cryptowallets/wasabi-app-menu-entry.sh) fix it for Wasabi wallet. See coments in thi script for details. For another app do analogically and see [oficial wiki](https://www.qubes-os.org/doc/app-menu-shortcut-troubleshooting/#what-if-my-application-has-not-been-automatically-included-in-the-list-of-available-a) about this problem.
