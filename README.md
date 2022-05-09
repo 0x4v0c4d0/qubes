@@ -33,9 +33,9 @@ When Qubes OS installed, boot, login and configure the system
 _Connect to the Internet first_
 
 ### Sceenshots
-For automoving screenshots to the one of appwm use [script](https://github.com/scott-m-willett/qvm-screenshot)
+For automoving screenshots from dom0 to the vault appwm use [this script](https://github.com/scott-m-willett/qvm-screenshot)
 
-### Template: debian
+### Template: debian-template
 Download this repo. 
 
 Copy it to the base debian template.
@@ -49,6 +49,57 @@ Give access to execute scripts: `sudo chmod +x /etc/myqubes/setup/*.sh`
 Execute script that prepears base debian template for use: `sudo /etc/myqubes/setup/base-template.sh`
 
 Then shutdown template.
+
+### Template: windows-10-x64-template
+Download windows iso, put in into untrusted qube. Or download it on usb, then connect usb to untrusted qube.
+
+Then run in dom0 terminal:
+
+```
+qvm-create --class TemplateVM --property virt_mode=HVM --property kernel='' --label black windows-10-x64-template
+qvm-prefs windows-10-x64-template memory 4096
+qvm-prefs windows-10-x64-template maxmem 4096
+qvm-prefs windows-10-x64-template kernel ''
+qvm-prefs windows-10-x64-template qrexec_timeout 7200
+qvm-volume extend windows-10-x64-template:root 60g
+```
+
+Replace with you windows iso path
+
+```
+qvm-start --cdrom=untrusted:/home/user/windows_install.iso windows-10-x64-template
+```
+
+Then install Windows as usually. 
+
+**Recomendation**: install the lightest edition - Windows Home edition.
+
+**Note**: Install on the first disk
+
+**Note**: windows qube could be shutdowned unexpectly a several times, just restart it and wait after installation done.
+
+**Note**: _see [windows standalone installation](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-vm41.md#summary-installing-windows-via-cli) and [windows template installation](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-vm41.md#summary-installing-windows-via-cli) official tutorial for details_
+
+When we reach to the microsoft account setup of the windows installation process, just create new account with any login/pass (we will not use it at all, after installation we switch to the local account, but for finish installation windows require microsoft account)
+
+Once Windows is installed and working, as administrator in Windows, set: `powercfg -H off`
+
+For switching microsoft account to local user account go to Settings->Account->Your info and click `Sign in with a local account instead`, create an admin account.
+
+Install Qubes Windows Tools (QWT) according to [official article](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-tools41.md#installing-qubes-guest-tools-in-windows-vms).
+
+**Optionally**: Activate windows, type in cmd as admin:
+```
+slmgr /skms kms.03k.org
+slmgr -ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+slmgr /ato
+```
+
+ignore errors if occurs, check is windows activated
+
+See [free licence keys](https://letmegooglethat.com/?q=windows+licence+free+keys) and "Option 3" article [there]()
+
+And finally install all windows software you need.
 
 ### AppVM: cryptowallet
 
