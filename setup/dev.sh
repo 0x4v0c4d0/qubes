@@ -2,7 +2,7 @@
 sudo apt-get update
 
 # Install Doker
-# Following https://docs.docker.com/engine/install/debian/
+# According to https://docs.docker.com/engine/install/debian/
 
 sudo apt-get install \
     apt-transport-https \
@@ -20,6 +20,11 @@ echo \
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
+
+# Execute docker post installation step
+# https://docs.docker.com/engine/install/linux-postinstall/
+sudo groupadd docker
+sudo usermod -aG docker $USER
 
 # Install NodeJs
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
