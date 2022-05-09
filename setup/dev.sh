@@ -19,7 +19,7 @@ echo \
 
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
 
 # Install NodeJs
 curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
