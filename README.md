@@ -84,9 +84,13 @@ When we reach to the microsoft account setup of the windows installation process
 
 Once Windows is installed and working, as administrator in Windows, set: `powercfg -H off`
 
+Then go to Settings->Devices->Display and set up display resolution as you wish. By default window is so small.
+
 For switching microsoft account to local user account go to Settings->Account->Your info and click `Sign in with a local account instead`, create an admin account.
 
 Install Qubes Windows Tools (QWT) according to [official article](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-tools41.md#installing-qubes-guest-tools-in-windows-vms).
+
+And finally install all windows software you need.
 
 **Optionally**: Activate windows, type in cmd as admin:
 ```
@@ -99,7 +103,12 @@ ignore errors if occurs, check is windows activated
 
 See [free licence keys](https://letmegooglethat.com/?q=windows+licence+free+keys) and "Option 3" article [there]()
 
-And finally install all windows software you need.
+**Optionally**: My own personalizations:
+- Display resolution 1920x1080
+- Settings->Personalization->Colors: "Choose your color": Dark and check "Automatically pick an accent color from background"
+- Browser->Settings->Appearance: Dark
+- Browser->Settings->Start: Open previos session
+- Setup wallpapers
 
 ### AppVM: cryptowallet
 
