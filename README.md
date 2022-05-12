@@ -81,15 +81,13 @@ Then install Windows as usually.
 
 **Note**: _see [windows standalone installation](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-vm41.md#summary-installing-windows-via-cli) and [windows template installation](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-vm41.md#summary-installing-windows-via-cli) official tutorial for details_
 
-When we reach to the microsoft account setup of the windows installation process, just create new account with any login/pass (we will not use it at all, after installation we switch to the local account, but for finish installation windows require microsoft account)
-
-Once Windows is installed and working, as administrator in Windows, set: `powercfg -H off`
+Once Windows is installed and working, as administrator in Windows, set: `powercfg -H off` and pause windows updates as max as can in Settings->Updates&Security->Advance Options
 
 Then go to Settings->Devices->Display and set up display resolution as you wish. By default window is so small.
 
-For switching microsoft account to local user account go to Settings->Account->Your info and click `Sign in with a local account instead`, create an admin account.
+Next format second disk (10GB disk by default) in disk manager into FAT32, with "Q" label.
 
-Install Qubes Windows Tools (QWT) according to [official article](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-tools41.md#installing-qubes-guest-tools-in-windows-vms).
+Now install Qubes Windows Tools (QWT) according to [official article](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-tools41.md#installing-qubes-guest-tools-in-windows-vms).
 
 And finally install all windows software you need.
 
