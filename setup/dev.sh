@@ -9,7 +9,7 @@ sudo apt-get install \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release
+    lsb-release -y
     
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
  
@@ -51,4 +51,4 @@ sudo apt update && sudo apt install virtualbox -y
 
 
 # Install rsync
-sudo apt-get install rsync
+sudo apt-get install rsync -y
