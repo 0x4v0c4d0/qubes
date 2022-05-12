@@ -19,7 +19,7 @@ echo \
 
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose -y
 
 # Execute docker post installation step
 # https://docs.docker.com/engine/install/linux-postinstall/
