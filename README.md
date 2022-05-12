@@ -64,7 +64,7 @@ qvm-prefs windows-10-x64-template qrexec_timeout 7200
 qvm-volume extend windows-10-x64-template:root 60g
 ```
 
-Start the qube. DO NOT CONNECT QUBE TO THE INTERNET.
+Start the qube. DO NOT CONNECT QUBE TO THE INTERNET BEFORE INSTALLATION DONE.
 Replace with you windows iso path
 
 ```
