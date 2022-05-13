@@ -85,8 +85,6 @@ Once Windows is installed and working, as administrator in Windows, set: `powerc
 
 Then go to Settings->Devices->Display and set up display resolution as you wish. By default window is so small.
 
-Next format second disk (10GB disk by default) in disk manager into FAT32, with "Q" label.
-
 Now install Qubes Windows Tools (QWT) according to [official article](https://github.com/Qubes-Community/Contents/blob/master/docs/os/windows/windows-tools41.md#installing-qubes-guest-tools-in-windows-vms).
 
 And finally install all windows software you need.
