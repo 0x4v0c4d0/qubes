@@ -91,14 +91,14 @@ And finally install all windows software you need.
 
 **Optionally**: Activate windows, type in cmd as admin:
 ```
-slmgr -ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+slmgr -ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH
 slmgr /skms kms.03k.org
 slmgr /ato
 ```
 
 ignore errors if occurs, check is windows activated
 
-See [free licence keys](https://letmegooglethat.com/?q=windows+licence+free+keys) and "Option 3" article [there]()
+[See details](https://mipped.com/f/threads/bystraja-aktivacija-ljuboj-versii-windows-office-bez-programm-obnovlenija-rabotajut.89087/)
 
 **Optionally**: My own personalizations:
 - Display resolution 1920x1080
