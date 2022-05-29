@@ -27,7 +27,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 # Install NodeJs
-curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
 # Install VSCode
