@@ -43,12 +43,5 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
 sudo apt update
 sudo apt install code -y
 
-# Install virtualbox
-echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bullseye contrib" |
-    sudo tee /etc/apt/sources.list.d/virtualbox.list
-wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-sudo apt update && sudo apt install virtualbox -y
-
-
 # Install rsync
 sudo apt-get install rsync -y
